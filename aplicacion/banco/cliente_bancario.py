@@ -7,9 +7,9 @@ class ClienteBancario:
 	__edad:int = 0
 	__balanceDeCuentas:float = 0.0
 
-	def __init__(mi,nombre:str, apellido:str,edad:int=0,balanceDeCuentas:float=0.0):
+	def __init__(mi,nombres:str, apellidos:str,edad:int=0,balanceDeCuenta:float=0.0):
 		mi.__validarEdad(edad)
-		mi.__validadCantidad(balanceDeCuentas)
+		mi.__validarCantidad(balanceDeCuentas)
 		mi.nombres = nombres
 		mi.apellidos = apellidos
 		mi.__edad = edad
