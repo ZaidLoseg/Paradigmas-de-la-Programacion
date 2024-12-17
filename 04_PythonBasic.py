@@ -92,7 +92,7 @@ print(capitales.get("India"))
 print(capitales.get("india"))
 
 #Reportar llave y valor
-for k in capitales
+for k in capitales:
   print("Key = " + k + ", Value = " + capitales[k])
 #Nuevo dato para el diccionario
 capitales["Mexico"]="CDMX"
