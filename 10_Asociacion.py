@@ -14,7 +14,7 @@ class A:
 	__b:float=0.0
 	__c:float=0.0
 
-	def __init__(mi,,a:float,b:float,c:float):
+	def __init__(mi,a:float,b:float,c:float):
 		mi.a = a
 		mi.b = b
 		mi.c = c
@@ -40,7 +40,7 @@ class B:
 # USANDO OBJETOS INDEPENDIENTES
 #=============================
 objetoA = A(1.0,2.0,3.0)
-objetoB(4.0,5.0)
+objetoB= B(4.0,5.0)
 print(objetoB.sumar_todo(objetoA.a,objetoA.b))
 
 #======================================
@@ -50,7 +50,7 @@ print(objetoB.sumar_todo(objetoA.a,objetoA.b))
 class C:
 	__d:float=0.0
 	__e:float=0.0
-	__Aa:A = none
+	__Aa:A = None
 
 	def __init__(mi,d:float,e:float):
 		mi.d = d
@@ -58,7 +58,7 @@ class C:
 		# A esta instanciado adentro
 		mi.Aa = A(1.0,2.0,3.0)
 
-	def sumar_todo(mi)
+	def sumar_todo(mi):
 		x:float = mi.d+mi.e+mi.Aa.a+mi.Aa.b)
 		return x
 
@@ -67,7 +67,7 @@ class C:
 # Contiene otro objeto dentro
 #================================
 objetoC = C(4.0,5.0)
-print(objetoC.sumar_todo()
+print(objetoC.sumar_todo())
 
 #========================================
 # Objeto D tiene dos reales y un objeto A
@@ -76,15 +76,15 @@ print(objetoC.sumar_todo()
 class D:
 	__d:float = 0.0
 	__e:float = 0.0
-	_Aa:A = none
-
+	_Aa: A = None
+	
 	def __init__(mi,d:float,e:float,Aa:A):
-	self.d = d
-	delf.e = e
-	self.Aa = A
-
+		mi.d = d
+		mi.e = e
+		mi.Aa = Aa
+	
 	def sumar_todo(mi):
-		x:float=mi.d+mi.e+mi.Aa.a+mi.Aa.b)
+		x:float=mi.d+mi.e+mi.Aa.a+mi.Aa.b
 		return x
 
 #=========================================
