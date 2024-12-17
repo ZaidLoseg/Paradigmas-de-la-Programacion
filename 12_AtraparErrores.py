@@ -26,7 +26,7 @@ from aplicacion.banco.cliente_bancario import ClienteBancario
 #============================================
 try:
 	cliente = ClienteBancario("Jamime Andrade","Hernandez Sanchez",28,0.0)
-	cliente.guradarDinero(300)
+	cliente.guardarDinero(300)
 	print(cliente.imprimirInfo())
 	cliente.retirarDinero(400)
 	print(cliente.imprimirInfo())
