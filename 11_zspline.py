@@ -12,7 +12,7 @@
 #================================
 
 import numpy as np
-from Curva import curva,zspline
+from Curva import Curva,zspline
 import matplotlib.pyplot as plt
 import math
 
@@ -43,7 +43,7 @@ x2,y2 = zspline(puntos,dim,n,1)
 x3,y3 = zspline(púntos,dim,n,0)
 plt.plot(x3,y3,lw=3,color="orange")
 plt.plot(x2,y2,lw=3,color="red")
-plt.plot(x1,y1,lw=3,color"blue")
+plt.plot(x1,y1,lw=3,color="blue")
 plt.scatter(puntos[0:nump],puntos[nump:2*nump],marker='o', color="black")
 plt.xlable("coordenadas x")
 plt.ylabel("coordenadas y")
