@@ -7,7 +7,7 @@ class ClienteBancario:
 	__edad:int = 0
 	__balanceDeCuentas:float = 0.0
 
-	def __init__(mi,nombre:str, apellido:str,edad:int=0,balanceDeCuentas:float=0.0:
+	def __init__(mi,nombre:str, apellido:str,edad:int=0,balanceDeCuentas:float=0.0):
 		mi.__validarEdad(edad)
 		mi.__validadCantidad(balanceDeCuentas)
 		mi.nombres = nombres
@@ -43,18 +43,18 @@ class ClienteBancario:
 
 	def __validarCantidad(mi,balanceDeCuenta:float) -> None:
 		if balanceDeCuenta < 0:
-		raise Exception("El balance no puede ser negativo")
+			raise Exception("El balance no puede ser negativo")
 
 	def guardarDinero(mi, cantidad:float) -> None:
-		mi.__balanceDeCuenta = mi.balanceDeCuenta + cantidad
-		mi.__mandarEmail("----guardando deposito----", "se recibieron " + str(cantidad)
+		mi.__balanceDeCuenta = mi.__balanceDeCuenta + cantidad
+		mi.__mandarEmail("----guardando deposito----" , "se recibieron " + str(cantidad))
 		mi.enviarBalanceAlBanco(cantidad)
 
 	def retirarDinero(mi, cantidad:float) -> None:
 		cantidadFinal = mi.__balanceDeCuenta - cantidad
 		mi.__validarCantidad(cantidadFinal)
 		mi.__balanceDeCuenta = cantidadFinal
-		mi.__mandarEmail("-----retirando dinero----"," se retiro " + str(cantidad)
+		mi.__mandarEmail("-----retirando dinero----"," se retiro " + str(cantidad))
 		mi.__enviarBalanceAlBanco(cantidad)
 
 
