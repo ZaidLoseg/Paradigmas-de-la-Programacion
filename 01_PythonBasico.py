@@ -67,7 +67,7 @@ print(matriz)
 #===================================================
 #IDENTACION ESTRICTA PARA PROCESOS DEPENDIENTES DE :
 #===================================================
-if 10>5
+if 10>5:
   print("diez es mayor que cinco")
   print("otra identacion")
 for i in lista:
@@ -77,7 +77,7 @@ if 10>5:
   print ("verdadero")
   if 10<20:
     print("verdadero")
-elif 5>3
+elif 5>3:
   print ("Esto no se imprimira")
 else:
   print("aqui nunca llega")
@@ -85,8 +85,8 @@ else:
 #==========
 #FUNCIONES 
 #==========
-def saludar(nombre)
+def saludar(nombre):
     print("Hola ",nombre)
     print("Bienvenido al tutorial de phyton")
 
-saludar(julian)
+saludar("julian")
