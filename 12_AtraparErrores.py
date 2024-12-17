@@ -40,7 +40,7 @@ except Exception as e:
 # Error por usar un atributo privado
 #====================================
 try:
-	print(cliente.__nombres)
+	print(cliente.nombres)
 except Exception as ex:
 	print("Error: " + str(ex))
 
