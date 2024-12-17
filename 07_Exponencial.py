@@ -27,20 +27,20 @@ def exponencial(n:int=1500,x:float=0.5):
    factorial *= float(i)
    s=1.0/factorial
    exponencial_de_x += s*x_a_la_n
-  return exponencial_de_x
+ return exponencial_de_x
 
 def exponencial_pro(n:int=1500,x:float=0.5):
  flag = False
  if x<0:
    flag = True
    x = -x
-  s=1.0
-  for i in range(n,0,-1):
+ s=1.0
+ for i in range(n,0,-1):
      s *= x/float(i)
      s+= 1.0
-  if flag == True:
+ if flag == True:
     s= 1/s
-  return s
+ return s
 
 m = 400
 serie = 250
@@ -49,10 +49,10 @@ error2 = []
 x0 = 0.0
 b = list(range(m))
 x = [x0+n*0.1 for n in b] #multiplicar por la lista de numeros
-for i in range(m)
+for i in range(m):
   y = x0+0.1*i
-  error.append(exponencial(serie,y)-math.exp(y))
-  error.append(exponencial_pro(serie,y)-math.exp(y))
+  error1.append(exponencial(serie,y)-math.exp(y))
+  error2.append(exponencial_pro(serie,y)-math.exp(y))
 
 grafica.subplot(211)
 grafica.plot(x,error1)
