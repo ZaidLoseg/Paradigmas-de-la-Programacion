@@ -41,11 +41,11 @@ class llanta:
 	# pero puede ser otro nombre (mi)
 	# parametro de entrada default
 	#=========================================
-	def __init__(mi,radio=50,ancho=30,presion1.5)
+	def __init__(mi,radio=50,ancho=30,presion=1.5):
 		# variable de la estructura completa llanta
 		llanta.cuenta += 1
 		# variables exclusivas de cada objeto
-		mi.radio = radios
+		mi.radio = radio
 		mi.ancho = ancho
 		mi.presion = presion
 
@@ -73,7 +73,7 @@ print("Total de llantas ",llanta.cuenta)
 print("presion de la llanta 4 = ",llanta4.presion)
 print("radio de la llanta 4 = ",llanta4.radio)
 print("radio de la llanta 3 = ",llanta3.radio)
-print("presion de la llanta 1 de mi choche = ",michoche.llanta1.presion)
+print("presion de la llanta 1 de mi choche = ",micoche.llanta1.presion)
 
 #======================
 # Encapsulamiento
@@ -85,11 +85,11 @@ print("presion de la llanta 1 de mi choche = ",michoche.llanta1.presion)
 #=====================================================================
 class estudiante:
 	def __init__(mi):
-		mi.nombre = ""
+		mi.__nombre = ''
 	def ponerme_nombre(mi,nombre):
 		print("se llamo a ponerme_nombre")
 		mi.nombre = nombre
-	def obtener nombre(mi)
+	def obtener_nombre(mi):
 		print("se llamo a obtener nombre")
 		return mi.nombre
 	nombre=property(obtener_nombre,ponerme_nombre)
@@ -97,7 +97,7 @@ class estudiante:
 #===================================
 # crear objeto estudiante sin nombre
 #===================================
-estudiante = Estudiante()
+estudiante = estudiante()
 
 #========================================================================
 # Ponerle nombre usando la propiedad nombre y el metodo ponerme_nombre
@@ -125,7 +125,7 @@ class Cuadrilatero:
 		mi.lado3=c
 		mi.lado4=d
 
-	def perimetro(mi)
+	def perimetro(mi):
 		p=mi.lado1+mi.lado2+mi.lado3+mi.lado4
 		print("perimetro = ",p)
 		return p
@@ -135,19 +135,19 @@ class Cuadrilatero:
 # Rectangulo es hijo de cuadrilatero
 # Rectangulo(Cuadrilatero)
 #====================================
-class Rectangulo(cuadrilatero):
+class Rectangulo(Cuadrilatero):
 	def __init__(mi,a,b):
 		#==========================
 		# Constructor de su madre
 		#==========================
-		super().__init__(a,b,c,d)
+		super().__init__(a,b,a,b)
 
 #=============================
 # Su nieto cuadrado
 # Hijo de rectangulo
 #=============================
-class cuadrado(rectangulo)
-	def __init__(mi,a)
+class cuadrado(Rectangulo):
+	def __init__(mi,a):
 		super().__init__(a,a)
 	def area(mi):
 		area = mi.lado1**2
@@ -167,7 +167,7 @@ cuadrado1= cuadrado(5)
 # llamar al metodo perimetro de su abuelo cuadrilatero
 #=====================================================
 
-perimetro1 = cuadrado1.perimeto()
+perimetro1 = cuadrado1.perimetro()
 
 #====================================
 # llamar a su propio metodo area
