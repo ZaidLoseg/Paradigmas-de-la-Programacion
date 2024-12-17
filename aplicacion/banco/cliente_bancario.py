@@ -5,7 +5,7 @@ class ClienteBancario:
 	__nombres:str = None
 	__apellidos:str = None
 	__edad:int = 0
-	__balanceDeCuentas:float = 0.0
+	__balanceDeCuenta:float = 0.0
 
 	def __init__(mi,nombres:str, apellidos:str,edad:int=0,balanceDeCuenta:float=0.0):
 		mi.__validarEdad(edad)
@@ -34,7 +34,7 @@ class ClienteBancario:
 			raise Excpetion("Es menor de edad")
 
 	def imprimirInfo(mi) -> str:
-		return "nombre: " + mi.getNombreCompleto() + ",Edad: " + str(self.__edad) + ", Balance: " + str(mi.__balanceDeCuenta)
+		return "nombre: " + mi.getNombreCompleto() + ",Edad: " + str(mi.__edad) + ", Balance: " + str(mi.__balanceDeCuenta)
 
 #===================================================
 # Metodo privado que checa si el balace es negativo
@@ -48,7 +48,7 @@ class ClienteBancario:
 	def guardarDinero(mi, cantidad:float) -> None:
 		mi.__balanceDeCuenta = mi.__balanceDeCuenta + cantidad
 		mi.__mandarEmail("----guardando deposito----" , "se recibieron " + str(cantidad))
-		mi.enviarBalanceAlBanco(cantidad)
+		mi.__enviarBalanceAlBanco(cantidad)
 
 	def retirarDinero(mi, cantidad:float) -> None:
 		cantidadFinal = mi.__balanceDeCuenta - cantidad
