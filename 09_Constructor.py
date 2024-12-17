@@ -25,13 +25,13 @@ class computadora:
 		mi.ram = ram
 
 	def imprimirInfoPC(mi):
-		print(f"Esta es la computadora marca: {mi.marca} con almacenamiento de {mi.capacidad}GB y memoria de {mi.ram}GB
+		print(f"Esta es la computadora marca: {mi.marca} con almacenamiento de {mi.capacidad}GB y memoria de {mi.ram}GB")
 
 	#=====================
 	# Destructor
 	#=====================
 	def __del__(mi):
-		print(f"Se elimino de la computadora: {mi.marca}
+		print(f"Se elimino de la computadora: {mi.marca}")
 
 
 #========================
@@ -40,14 +40,14 @@ class computadora:
 class Persona:
 	nombres: str = None
 	apellido: str = None
-	edad int = 0
+	edad: int = 0
 	direccion: str = None
-	computadora: computadora = none
+	computadora: computadora = None
 	
 	#===============================
 	# Constructor de persona
 	#===============================
-	def __init__(mi,nombres:str,apellido:str,edad:int, direccion:str, marca:str, capacidad:int, ram:int):
+	def __init__(mi,nombres:str,apellidos:str,edad:int, direccion:str, marca:str, capacidad:int, ram:int):
 		mi.nombres = nombres
 		mi.apellidos = apellidos
 		mi.edad = edad
@@ -56,24 +56,24 @@ class Persona:
 		print(f"---Accedimos al constructor de la persona: {nombres} {apellidos}")
 
 	def imprimirinfo(mi) -> None:
-		print(f"---Mi nombre es {mi.nombre} {mi.apellidos, tengo {mi.edad} años de edad, y vivo en {mi.direccion}")
-		mi.computadora.imprimirinfo()
+		print(f"---Mi nombre es {mi.nombres} {mi.apellidos}, tengo {mi.edad} años de edad, y vivo en {mi.direccion}")
+		mi.computadora.imprimirInfoPC()
 
 	#==================
 	# Destructor
 	#==================
 	def __del__(mi):
-		print(f"--Eliminamos a la persona...{mi.nombre} {mi.apellidos})
+		print(f"--Eliminamos a la persona...{mi.nombres} {mi.apellidos}")
 
 #==================================
 # Funcion 1 es el programa
 #==================================
 def funcion1():
-	persona1 = persona("Carlos","Perez",40,"Xochimilco","Lenovo",700,8)
+	persona = Persona("Carlos","Perez",40,"Xochimilco","Lenovo",700,8)
 	print("\n")
 	persona.imprimirinfo()
 	print("\n")
-	persona2 = persona("Magdalena","Carrillo",35,"Jalapa","IBM",200,4)
+	persona2 = Persona("Magdalena","Carrillo",35,"Jalapa","IBM",200,4)
 	print("\n")
 	persona2.imprimirinfo()
 	print("\n")
