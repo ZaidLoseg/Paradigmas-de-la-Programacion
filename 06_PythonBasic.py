@@ -62,13 +62,13 @@ saludos(a)
 #===============================
 def saludos_multiples(nombre1,nombre2,nombre3):
    """Esta funcion saluda a 3 personas al mismo tiempo"""
-   print("Hola ",nombre1,",",nombre2,"y",nombre3
+   print("Hola ",nombre1,",",nombre2,"y",nombre3)
 saludos_multiples("Hugo","Paco","Luis")
 
 #==========================================
 # Funcion con cualquier numero de argumento
 #==========================================
-def muchos_saludos(*nombres)
+def muchos_saludos(*nombres):
   """ esta funcion saluda a todos los que quieras"""
   i=0
   #=================================
@@ -81,12 +81,12 @@ def muchos_saludos(*nombres)
        print(nombres[i])
     else:
      #cualquier otro nombre
-     print(nombres[i], end?=", ")
-    t+1
+     print(nombres[i], end=", ")
+    i+=1
 
 muchos_saludos("Nicole","Enrique","Alejandro","Ivan","Zaid","Joel","Seervin")
 
-def greet(firtname, lastname)
+def greet(firstname, lastname):
    print('Hello',firstname,lastname)
 
 #==============================================
@@ -118,7 +118,7 @@ greet('Steve')
 #=========================
 # Funcion con resultado
 #=========================
-def suma(a,b)
+def suma(a,b):
  return a+b
 
 #===================================================
@@ -139,7 +139,7 @@ print(a1)
 #==============================
 # Lambda de varias variables
 #==============================
-suma lambda x1,x2, x3: x1+x2+x3
+suma=lambda x1,x2, x3: x1+x2+x3
 print(suma(99,98,97))
 
 sumas = lambda *x: x[0]+x[1]+x[2]+x[3]
