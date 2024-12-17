@@ -11,7 +11,7 @@
 # Las listas pueden ser de objetos diferentes
 #=============================================
 miprimerlista= [] #lista vacia
-print(mipimerlista)
+print(miprimerlista)
 
 #=============================================
 # Llenado de lista
@@ -73,7 +73,7 @@ print(potencial[100])
 # Generar una tupla con la lista
 #=========================================
 potencial = tuple(potencial)
-print(potencial[100]
+print(potencial[100])
 
 
 
