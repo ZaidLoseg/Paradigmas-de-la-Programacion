@@ -9,7 +9,7 @@
 #=====================================================
 # Input permite obtener datos del usuario en prompter
 #=====================================================
-nombre= imput("Damte tu nombre: ")
+nombre= input("Damte tu nombre: ")
 print("hola como estas", nombre)
 
 #=======================================
@@ -83,5 +83,5 @@ print(n)
 #=============================================================
 palabra = "hola" 
 print(palabra[0])
-print(palabra[-4]
+print(palabra[-4])
 
